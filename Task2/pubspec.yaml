@@ -1,0 +1,36 @@
+name: alarm_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+dependencies:
+  analog_clock: ^0.1.1
+  flutter:
+    sdk: flutter
+  flutter_analog_clock: ^1.0.3
+  flutter_local_notifications: ^16.3.2
+  intl: ^0.19.0
+  timezone: ^0.9.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+dependency_overrides:
+  timezone:
+    git:
+      url: https://github.com/frankpepermans/timezone.dart
+      path: timezone
+      ref: 2726e9d # Use the latest commit hash from the timezone.dart repo
+    platforms:
+      - linux
+      - macos
+      - windows
+      - web
+
+flutter:
+  uses-material-design: true
